@@ -1,0 +1,450 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height:1;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background: rgb(255, 255, 255);
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section, video {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+a:hover {
+    color: rgb(78, 94, 124);
+    transition: color 8ms linear;
+}
+
+p {
+    font-size: 20px;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+.grid {
+    display: grid;
+    position: relative;
+    grid-gap: 0px;
+    margin:0 auto;
+    padding:0;
+    grid-template-areas:"hero"
+                        "navbar" 
+                        "aboutme"
+                        "projects"
+                        "contactme"
+                        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(10px, auto);
+    align-items: start;
+}
+
+.hero {
+    grid-area: hero;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.myVideo {
+    object-fit: cover;
+    width: 100%;
+    height: 95vh;
+    top: 0;
+    left: 0;
+    
+}
+
+.overlay {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.9);
+}
+
+.hero h3 {
+    font-size: 36px;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(10, 10, 10)
+}
+
+.hero h1 {
+    font-size: 68px;
+    position: absolute;
+    top: 38%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(10, 10, 10)
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero h3 { 
+    width: 100%;
+    left: 50%;
+    font-size: 26px;
+    }
+
+    .hero h1 {
+        width: 100%;
+        left: 50%;
+        font-size: 48px;
+    }
+}
+
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    margin: 5px;
+    height: 100%;
+    width: auto;
+}
+
+.navbar a {
+    font-size: 18px;
+}
+
+#aboutme {
+    grid-area: aboutme;
+    padding: 80px 10px;
+    text-align: center;
+    background-color: rgb(70, 134, 255);
+    
+}
+
+#aboutme h1 {
+    font-size: 40px;
+    width: 70%;
+    padding-bottom: 40px;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(95, 131, 197);
+}
+
+#aboutme p {
+    width: 70%;
+    margin: auto;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(95, 131, 197); 
+}
+
+#aboutme a {
+    color: rgb(235, 182, 8);
+}
+
+.aboutme__text {
+    margin-bottom: 120px;
+}
+
+.my__skills {
+    color: seashell;
+    font-size: 25px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.fawesome__icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0px 30px 0px;
+    margin: auto;
+    width: 75%;
+    text-shadow: 3px 3px rgb(51, 50, 50);
+}
+
+.fa-html5 {
+    color: rgb(241, 219, 14);
+}
+
+.fa-css3-alt {
+    color: rgb(11, 192, 90);
+}
+
+.fa-figma {
+    color: rgb(154, 14, 235);
+}
+
+.fa-wordpress-simple {
+    color: rgb(185, 187, 190);
+}
+
+.container__icons {
+    display: grid;
+    grid-template-columns: 160px;
+    grid-template-rows: 60px 50px;
+    grid-template-areas: "icon"
+                         "text";
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px;
+}
+
+.icon {
+    display: icon;
+    padding: 10px;
+}
+
+.icon__description {
+    display: text;
+    margin: 0;
+    padding: 10px;
+}
+
+.container__icons p {
+    font-size: 0.9em;
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .container__icons p { 
+    text-align: center;
+    display: block;
+    }
+}
+
+.projects__title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.projects__title p {
+    font-size: 25px;
+}
+
+#projects {
+    grid-area: projects;
+    position: relative;
+    padding: 50px 20px 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 200px 100px 70px;
+    grid-template-areas: "image"
+                         "text"
+                         "button";
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgb(145, 171, 201);
+    border: solid 1px rgb(128, 153, 177);
+    text-align: center;
+    margin: 30px;
+}
+
+.card__image--1 {
+    grid-area: image;
+    background: url("cockpitlife.png");
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-size: cover;
+}
+
+.card__image--2 {
+    grid-area: image;
+    background: url("dmitry-schemelev-OEnKKXvdbDU-unsplash (1).jpg");
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-size: cover;
+}
+
+.card__image--3 {
+    grid-area: image;
+    background: url("mangologo.jpg");
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-size: cover;
+}
+
+.card__text {
+    grid-area: text;
+    margin: 30px;
+}
+
+.card__button {
+    grid-area: button;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: rgb(17, 136, 248);
+}
+
+.card__button a:hover {
+    color: rgb(230, 162, 16);
+    transition: color 8ms linear;
+}
+
+.card__button a{
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    width: 77%;
+    padding: 16px 10px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+textarea {
+    width: 77%;
+    padding: 16px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+@media only screen and (max-width: 768px) {
+    textarea { 
+    width: 100%;
+    }
+
+    input {
+    width: 100%;
+    }
+}
+
+#contactme {
+    grid-area: contactme;
+    padding: 80px;
+    text-align: center;
+    background-color: rgb(70, 134, 255);
+}
+
+#contactme h2 {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin: 40px;
+}
+
+#contactme p {
+    color: rgb(255, 255, 255);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contactme__form {
+    padding: 50px;
+}
+
+.contactme__form--input {
+    margin: 10px auto;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 16px;
+}
